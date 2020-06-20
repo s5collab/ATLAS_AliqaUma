@@ -1,8 +1,8 @@
-This the repository for the paper "Broken into Pieces: ATLAS and Aliqa Uma as One Single Stream"
+This is the repository for paper "Broken into Pieces: ATLAS and Aliqa Uma as One Single Stream" (Li et al. 2020)
 
-Radial velocity and metallicity of member stars (i.e. Table 1 in the paper) and the distance moduli of blue horizontal branch stars and RR Lyrae stars can be found in the data folder.
+Radial velocities and metallicities of the member stars (i.e. Table 1 in the paper) and the distance moduli of blue horizontal branch stars and RR Lyrae stars can be found in the data/ folder.
 
-The STAN model used to model the 2-D density distribution of stars with splines, together with the derived stream parameters (including stream track, stream width and stream surface brightness) can be found in stream_params/ folder. See fits file header for details.
+The STAN model used to model the 2-D density distribution of stars with splines, together with the derived stream parameters (including stream track, stream width and stream surface brightness) can be found in stream_params/ folder. See fits file header for details on each column.
 
-The best-fit stream and its associated orbit can be found in dyn_model folder. The columns are described in the header of each file.
+The best-fit stream and its associated orbit can be found in dyn_model/ folder. The columns are described in the header of each file.
 
