@@ -1,3 +1,13 @@
+// Author: Sergey Koposov Email: skoposov _AT_ ed.ac.uk
+// If you use this model, please acknowledge it by citing Erkal+2017
+// https://ui.adsabs.harvard.edu/abs/2017MNRAS.470...60E/abstract
+// and Koposov+2019 https://ui.adsabs.harvard.edu/abs/2019MNRAS.485.4726K/abstract papers
+// History
+// 12 Jul 2021 It was discovered that the spline coefficient code
+// had an off-by-one bug that manifested itself when the knot
+// separations were not equal. (that does not affect the Li+2021 paper
+// results as we used constant separation knots)
+
 functions{
 
 	// get the vector of spacings between nodes
@@ -43,8 +53,8 @@ functions{
 		}
 		for (i in 1:n-2)
 		{
-			M[i+1,i] = hi[i];
-			M[i,i+1] = hi[i];
+			M[i+1,i] = hi[i+1];
+			M[i,i+1] = hi[i+1];
 		}
 		//print (M)
 		zs = M \ ui ; //mdivide_left_spd(M, ui);
